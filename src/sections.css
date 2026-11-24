@@ -813,7 +813,8 @@ html {
   width: 140px;
   height: 40px;
   object-fit: contain;
-  filter: grayscale(1) brightness(0) invert(58%);
+  filter: grayscale(1);
+  opacity: .58;
 }
 
 @keyframes sy-marquee {
@@ -1303,7 +1304,7 @@ dialog.sy-dialog::backdrop {
     margin: 0;
   }
 
-  .sy-home .site-header #open-bag {
+  .sy-home .site-header .header-actions {
     grid-column: 2;
     grid-row: 1;
   }

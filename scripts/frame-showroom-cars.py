@@ -77,6 +77,7 @@ def main():
             (round((LEFT + 0.35 * TARGET_W) / CW * 100), round((BASELINE - 0.20 * car_h) / CH * 100)),
             (round((LEFT + 0.58 * TARGET_W) / CW * 100), round((y0c + 0.32 * car_h) / CH * 100)),
             (round((LEFT + 0.13 * TARGET_W) / CW * 100), round((BASELINE - 0.45 * car_h) / CH * 100)),
+            (round((LEFT + 0.80 * TARGET_W) / CW * 100), round((y0c + 0.16 * car_h) / CH * 100)),
         ]
         rows.append((slug, bg, os.path.getsize(dst) // 1024, pins))
 

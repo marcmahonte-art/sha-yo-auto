@@ -1,3 +1,5 @@
+import './request-configurator';
+
 interface Variant {
   id: number;
   a: boolean;
@@ -673,6 +675,7 @@ class RunwaySection extends HTMLElement {
   private heroes: HTMLElement[] = [];
   private ticks: HTMLButtonElement[] = [];
   private panels: HTMLElement[] = [];
+  private configurator: (HTMLElement & { setVehicle(name: string): void; reset(): void }) | null = null;
 
   private index = 0;
   private target = 0;
@@ -748,6 +751,7 @@ class RunwaySection extends HTMLElement {
     this.heroes = Array.from(this.querySelectorAll('[data-rw-hero]'));
     this.ticks = Array.from(this.querySelectorAll('[data-rw-tick]'));
     this.panels = Array.from(this.querySelectorAll('[data-rw-panel]'));
+    this.mountConfigurator();
 
     this.motionMq = window.matchMedia('(prefers-reduced-motion: reduce)');
     this.reducedMotion = this.motionMq.matches;
@@ -1812,9 +1816,27 @@ class RunwaySection extends HTMLElement {
     this.kick();
   }
 
+  private mountConfigurator(): void {
+    const host = this.panels[this.index]?.querySelector<HTMLElement>('[data-rw-config-host]');
+    if (!host) return;
+    if (!this.configurator) {
+      this.configurator = document.createElement('request-configurator') as HTMLElement & {
+        setVehicle(name: string): void;
+        reset(): void;
+      };
+    }
+    host.appendChild(this.configurator);
+    this.configurator.setVehicle(this.heroes[this.index]?.dataset.name || '');
+  }
+
   private setIndex(i: number, silent: boolean): void {
     const prevIdx = this.index;
     this.index = ((i % this.LOOK_COUNT) + this.LOOK_COUNT) % this.LOOK_COUNT;
+
+    if (this.index !== prevIdx) {
+      this.mountConfigurator();
+      this.configurator?.reset();
+    }
 
     const m = this.mode();
     for (const s of this.bodies) {
