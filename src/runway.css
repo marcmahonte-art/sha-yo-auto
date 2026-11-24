@@ -2551,3 +2551,15 @@ runway-section.rw {
     transition: none !important;
   }
 }
+
+/* Mobile improvements to prevent vehicle overlap and improve iPhone responsiveness */
+@media (max-width: 749px) {
+  .rw__stage {
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+  .rw__panel {
+    max-height: calc(100vh - 60vh - var(--rw-bar-r, 20px));
+    overflow-y: auto;
+  }
+}
