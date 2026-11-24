@@ -56,6 +56,83 @@ function initCatalogueFilters() {
   apply('all');
 }
 
+/* -------------------------------------------------- Fiche véhicule (pop-up) */
+
+function initVehicleDialog() {
+  const dialog = document.getElementById('vehicle-dialog');
+  const cards = Array.from(document.querySelectorAll('.sy-card[data-vehicle]'));
+  if (!dialog || !cards.length) return;
+
+  const title = dialog.querySelector('[data-vehicle-dialog-title], #vehicle-dialog-title');
+  const image = dialog.querySelector('[data-vehicle-image]');
+  const body = dialog.querySelector('[data-vehicle-body]');
+  const color = dialog.querySelector('[data-vehicle-color]');
+  const angle = dialog.querySelector('[data-vehicle-angle]');
+  const desc = dialog.querySelector('[data-vehicle-desc]');
+  const whatsapp = dialog.querySelector('[data-vehicle-whatsapp]');
+  const closers = Array.from(dialog.querySelectorAll('[data-vehicle-close]'));
+  let opener = null;
+
+  const close = () => {
+    if (typeof dialog.close === 'function') dialog.close();
+    else dialog.removeAttribute('open');
+    if (opener && typeof opener.focus === 'function') opener.focus();
+    opener = null;
+  };
+
+  cards.forEach((card) => {
+    card.addEventListener('click', () => {
+      const name = card.dataset.vehicle || 'Véhicule';
+      const vehicleBody = card.dataset.body || '—';
+      const vehicleColor = card.dataset.color || '—';
+      const vehicleAngle = card.dataset.angle || '—';
+      const vehicleDesc = card.dataset.desc || '';
+      const cardImage = card.querySelector('.sy-card-img');
+      const src = cardImage ? (cardImage.currentSrc || cardImage.src || '') : '';
+
+      opener = card;
+      if (title) title.textContent = name;
+      if (image) {
+        if (src) image.src = src;
+        image.alt = `${name}, ${vehicleBody}, ${vehicleColor}`;
+      }
+      if (body) body.textContent = vehicleBody;
+      if (color) color.textContent = vehicleColor;
+      if (angle) angle.textContent = vehicleAngle;
+      if (desc) desc.textContent = vehicleDesc;
+
+      if (whatsapp) {
+        const lines = [
+          'Bonjour SHA-YO AUTO,',
+          'Je souhaite connaître le prix de ce véhicule :',
+          `Véhicule : ${name}`,
+          `Carrosserie : ${vehicleBody}`,
+          `Teinte : ${vehicleColor}`,
+          `Angle du visuel : ${vehicleAngle}`,
+          vehicleDesc ? `Informations : ${vehicleDesc}` : '',
+          'Merci de me confirmer le prix et la disponibilité.',
+        ].filter(Boolean);
+        whatsapp.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(lines.join('\n'))}`;
+      }
+
+      if (typeof dialog.showModal === 'function') dialog.showModal();
+      else dialog.setAttribute('open', '');
+    });
+  });
+
+  closers.forEach((btn) => btn.addEventListener('click', close));
+
+  dialog.addEventListener('click', (event) => {
+    if (event.target === dialog) close();
+  });
+
+  if (whatsapp) {
+    whatsapp.addEventListener('click', () => {
+      status('Votre demande de prix a été préparée dans WhatsApp.');
+    });
+  }
+}
+
 /* ---------------------------------------------------------- Boîte de devis */
 
 function initQuoteDialog() {
@@ -131,6 +208,7 @@ function initQuoteDialog() {
 
 function init() {
   initCatalogueFilters();
+  initVehicleDialog();
   initQuoteDialog();
 }
 

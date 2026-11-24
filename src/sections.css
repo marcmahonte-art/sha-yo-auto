@@ -443,6 +443,15 @@ html {
   overflow: hidden;
 }
 
+.sy-card[data-vehicle] {
+  width: 100%;
+  color: var(--sy-ink);
+  text-align: left;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
 .sy-card-img {
   display: block;
   width: 100%;
@@ -503,6 +512,30 @@ html {
 .sy-card .sy-badge--success {
   background: var(--sy-soft);
   color: var(--sy-ink);
+}
+
+.sy-card .sy-card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 6px;
+  color: var(--sy-red);
+  font: 500 12px var(--sy-font);
+  letter-spacing: 0.02em;
+}
+
+.sy-card[data-vehicle]:hover .sy-card-cta,
+.sy-card[data-vehicle]:focus-visible .sy-card-cta {
+  color: var(--sy-red-hover);
+}
+
+.sy-card[data-vehicle]:hover .sy-card-img {
+  transform: scale(1.02);
+}
+
+.sy-card .sy-card-img {
+  transition: transform 240ms ease;
 }
 
 .sy-card-body .sy-btn {
@@ -931,6 +964,96 @@ dialog.sy-dialog::backdrop {
   backdrop-filter: blur(4px);
 }
 
+dialog.sy-dialog--vehicle {
+  width: min(760px, 100vw - 32px);
+}
+
+.sy-dialog--vehicle .sy-dialog-inner {
+  gap: 14px;
+  padding: 20px;
+}
+
+.sy-dialog--vehicle .sy-btn--primary {
+  background: var(--sy-red);
+  border-color: var(--sy-red);
+  color: #fff;
+}
+
+.sy-dialog--vehicle .sy-btn--primary:hover {
+  background: var(--sy-red-hover);
+  border-color: var(--sy-red-hover);
+}
+
+.sy-vehicle-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 340px;
+  aspect-ratio: 1200 / 760;
+  object-fit: contain;
+  background: var(--sy-soft);
+  border: 1px solid var(--sy-line);
+}
+
+.sy-vehicle-meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px 24px;
+  margin: 0;
+}
+
+.sy-vehicle-meta > div {
+  min-width: 0;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--sy-line);
+}
+
+.sy-vehicle-meta dt {
+  margin: 0 0 6px;
+  color: var(--sy-muted);
+  font: 500 10px var(--sy-font);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.sy-vehicle-meta dd {
+  margin: 0;
+  font: 500 14px/1.45 var(--sy-font);
+  overflow-wrap: anywhere;
+}
+
+.sy-vehicle-desc {
+  margin: 0;
+  color: var(--sy-muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+@media (max-width: 749px) {
+  dialog.sy-dialog--vehicle {
+    max-height: 92dvh;
+  }
+
+  .sy-vehicle-img {
+    max-height: none;
+  }
+
+  .sy-vehicle-meta {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .sy-dialog--vehicle .sy-dialog-actions {
+    flex-direction: column-reverse;
+  }
+
+  .sy-dialog--vehicle .sy-dialog-actions .sy-btn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
 .sy-dialog-inner {
   display: flex;
   flex-direction: column;
@@ -1302,6 +1425,10 @@ dialog.sy-dialog::backdrop {
     grid-column: 1;
     grid-row: 1;
     margin: 0;
+  }
+
+  .sy-home .site-header .brand img {
+    height: 40px;
   }
 
   .sy-home .site-header .header-actions {

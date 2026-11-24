@@ -81,6 +81,13 @@ button:focus-visible, a:focus-visible {
   flex-shrink: 0;
 }
 
+.site-header .brand img {
+  display: block;
+  width: auto;
+  height: 64px;
+  object-fit: contain;
+}
+
 .site-header nav {
   display: flex;
   gap: 28px;
@@ -2077,6 +2084,9 @@ runway-section.rw {
   }
   .site-header .brand {
     font-size: 13px;
+  }
+  .site-header .brand img {
+    height: 48px;
   }
   .site-header nav {
     gap: 14px;

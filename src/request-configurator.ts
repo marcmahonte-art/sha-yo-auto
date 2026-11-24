@@ -129,10 +129,12 @@ export class RequestConfigurator extends HTMLElement {
         <button class="rw__config-back" type="button" data-config-back hidden>Retour</button>
         <button class="rw__cta" type="button" data-config-next>
           <span class="rw__cta-add">Continuer</span>
+          <span class="rw__cta-m">Continuer</span>
           <svg class="rw__cta-arrow" width="22" height="12" viewBox="0 0 26 14" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 7h24M19 1l6 6-6 6" /></svg>
         </button>
         <button class="rw__cta" type="button" data-config-send hidden>
           <span class="rw__cta-add">Envoyer ma configuration</span>
+          <span class="rw__cta-m">Envoyer ma configuration</span>
           <svg class="rw__cta-arrow" width="22" height="12" viewBox="0 0 26 14" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 7h24M19 1l6 6-6 6" /></svg>
         </button>
       </div>

@@ -22,7 +22,7 @@
   <body class="sy-body">
     <a class="sy-skip-link" href="#contenu">Aller au contenu</a>
     <header class="site-header shopify-section-group-header-group" id="top">
-      <a href="index.html" class="brand" aria-label="SHA-YO AUTO, retour à l’accueil">SHA-YO AUTO</a>
+      <a href="index.html" class="brand" aria-label="SHA-YO AUTO, retour à l’accueil"><img src="/src/assets/images/logo-header.png" alt="" width="256" height="256" /></a>
       <nav aria-label="Navigation principale">
         <a href="index.html">Accueil</a>
         <a href="showroom.html">Showroom</a>
@@ -48,7 +48,7 @@
           <span class="sy-eyebrow">Catalogue</span>
           <h1 class="sy-h1">Découvrez notre sélection</h1>
         </div>
-        <p class="sy-lead">Véhicules neufs, d’occasion et de luxe à Ouagadougou. Les véhicules sont publiés ici dès que leur état, leurs caractéristiques et leur prix sont validés.</p>
+        <p class="sy-lead">Véhicules neufs, d’occasion et de luxe à Ouagadougou. Les caractéristiques proviennent du catalogue visuel Chaillot Auto ; le prix et la disponibilité se demandent directement à l’équipe SHA-YO AUTO.</p>
       </div>
     </section>
     <section id="catalogue" class="sy-section" aria-labelledby="catalogue-title">
@@ -62,23 +62,103 @@
         </div>
         <div class="sy-filters" role="group" aria-label="Filtrer les véhicules">
           <button class="sy-filter" type="button" data-filter="all" aria-pressed="true">Tous</button>
-          <button class="sy-filter" type="button" data-filter="neuf" aria-pressed="false">Neufs</button>
-          <button class="sy-filter" type="button" data-filter="occasion" aria-pressed="false">Occasion</button>
-          <button class="sy-filter" type="button" data-filter="luxe" aria-pressed="false">Luxe</button>
+          <button class="sy-filter" type="button" data-filter="berline" aria-pressed="false">Berlines</button>
+          <button class="sy-filter" type="button" data-filter="suv" aria-pressed="false">SUV</button>
+          <button class="sy-filter" type="button" data-filter="4x4" aria-pressed="false">4x4</button>
+          <button class="sy-filter" type="button" data-filter="citadine" aria-pressed="false">Citadines</button>
           <button class="sy-filter sy-btn sy-btn--quiet" type="button" data-filter-reset>Réinitialiser les filtres</button>
         </div>
         <div class="sy-grid sy-grid--cols-3 gap-6">
-          <div class="sy-card" data-cat="occasion">
-            <img src="/src/assets/images/car_porsche_gt3_1795459062880.jpg" alt="Vehicle 1" class="sy-card-img" />
-            <div class="sy-card-body">
-              <h3 class="sy-card-title">Toyota Corolla 2020</h3>
-              <p class="sy-card-text">Km: 35 000 | Transmission: Automatique</p>
-              <p class="sy-card-price">FCFA 12 500 000</p>
-              <p class="sy-card-status sy-badge sy-badge--success">Disponible</p>
-              <a class="sy-btn sy-btn--primary" href="https://wa.me/22673366363?text=Bonjour%20SHA-YO%20AUTO%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20le%20Toyota%20Corolla%202020" target="_blank" rel="noopener noreferrer">Contacter</a>
-            </div>
-          </div>
-          <!-- Additional vehicle cards can be added here -->
+          <button class="sy-card" type="button" data-cat="berline" data-vehicle="Toyota Camry SE Hybrid" data-body="Berline" data-color="Blanc nacré" data-angle="Profil trois-quarts avant" data-desc="Finition sportive SE avec calandre nid d’abeille noire, emblème Toyota hybride bleu et jantes alliage multibranches.">
+            <img class="sy-card-img" src="/src/assets/images/catalogue/toyota-camry-se-hybrid.webp" alt="Toyota Camry SE Hybrid, Berline, Blanc nacré" width="1200" height="760" />
+            <span class="sy-card-body">
+              <span class="sy-card-title">Toyota Camry SE Hybrid</span>
+              <span class="sy-card-text">Berline · Blanc nacré</span>
+              <span class="sy-card-status sy-badge">Prix sur demande</span>
+              <span class="sy-card-cta">Voir la fiche <span aria-hidden="true">→</span></span>
+            </span>
+          </button>
+          <button class="sy-card" type="button" data-cat="suv" data-vehicle="Mazda CX-3 AWD" data-body="SUV Compact" data-color="Gris métallisé" data-angle="Profil trois-quarts avant" data-desc="Transmission intégrale AWD, calandre chromée Kodo, passages de roues noirs mats et jantes alliage.">
+            <img class="sy-card-img" src="/src/assets/images/catalogue/mazda-cx-3-awd.webp" alt="Mazda CX-3 AWD, SUV Compact, Gris métallisé" width="1200" height="760" />
+            <span class="sy-card-body">
+              <span class="sy-card-title">Mazda CX-3 AWD</span>
+              <span class="sy-card-text">SUV Compact · Gris métallisé</span>
+              <span class="sy-card-status sy-badge">Prix sur demande</span>
+              <span class="sy-card-cta">Voir la fiche <span aria-hidden="true">→</span></span>
+            </span>
+          </button>
+          <button class="sy-card" type="button" data-cat="suv" data-vehicle="Zotye T700" data-body="SUV" data-color="Blanc pur" data-angle="Profil trois-quarts avant" data-desc="Calandre étoilée chromée, optiques LED effilées, ouïes latérales chromées et barres de toit aluminium.">
+            <img class="sy-card-img" src="/src/assets/images/catalogue/zotye-t700.webp" alt="Zotye T700, SUV, Blanc pur" width="1200" height="760" />
+            <span class="sy-card-body">
+              <span class="sy-card-title">Zotye T700</span>
+              <span class="sy-card-text">SUV · Blanc pur</span>
+              <span class="sy-card-status sy-badge">Prix sur demande</span>
+              <span class="sy-card-cta">Voir la fiche <span aria-hidden="true">→</span></span>
+            </span>
+          </button>
+          <button class="sy-card" type="button" data-cat="suv" data-vehicle="Skynomad SUV" data-body="Grand SUV" data-color="Gris anthracite" data-angle="Profil trois-quarts avant" data-desc="Face avant épurée avec signature lumineuse horizontale, capteur de toit, poignées affleurantes et jantes bicolores grand diamètre.">
+            <img class="sy-card-img" src="/src/assets/images/catalogue/skynomad-suv.webp" alt="Skynomad SUV, Grand SUV, Gris anthracite" width="1200" height="760" />
+            <span class="sy-card-body">
+              <span class="sy-card-title">Skynomad SUV</span>
+              <span class="sy-card-text">Grand SUV · Gris anthracite</span>
+              <span class="sy-card-status sy-badge">Prix sur demande</span>
+              <span class="sy-card-cta">Voir la fiche <span aria-hidden="true">→</span></span>
+            </span>
+          </button>
+          <button class="sy-card" type="button" data-cat="berline" data-vehicle="Changan UNI-V" data-body="Berline Fastback" data-color="Gris foncé" data-angle="Profil trois-quarts avant" data-desc="Calandre paramétrique sans cadre, phares LED acérés, bouclier sport et jantes alliage noir brillant.">
+            <img class="sy-card-img" src="/src/assets/images/catalogue/changan-uni-v.webp" alt="Changan UNI-V, Berline Fastback, Gris foncé" width="1200" height="760" />
+            <span class="sy-card-body">
+              <span class="sy-card-title">Changan UNI-V</span>
+              <span class="sy-card-text">Berline Fastback · Gris foncé</span>
+              <span class="sy-card-status sy-badge">Prix sur demande</span>
+              <span class="sy-card-cta">Voir la fiche <span aria-hidden="true">→</span></span>
+            </span>
+          </button>
+          <button class="sy-card" type="button" data-cat="suv" data-vehicle="Landwind X7 2.0T" data-body="SUV Compact" data-color="Or / Bronze métallisé" data-angle="Profil trois-quarts avant" data-desc="Carrosserie teinte bronze doré, montants de toit noir laqué, sabot avant aluminium et jantes bicolores.">
+            <img class="sy-card-img" src="/src/assets/images/catalogue/landwind-x7-2-0t.webp" alt="Landwind X7 2.0T, SUV Compact, Or / Bronze métallisé" width="1200" height="760" />
+            <span class="sy-card-body">
+              <span class="sy-card-title">Landwind X7 2.0T</span>
+              <span class="sy-card-text">SUV Compact · Or / Bronze métallisé</span>
+              <span class="sy-card-status sy-badge">Prix sur demande</span>
+              <span class="sy-card-cta">Voir la fiche <span aria-hidden="true">→</span></span>
+            </span>
+          </button>
+          <button class="sy-card" type="button" data-cat="suv" data-vehicle="Landwind X5" data-body="SUV" data-color="Blanc pur" data-angle="Vue de face trois-quarts" data-desc="Vue trois-quarts face mettant en valeur la calandre à barrettes chromées, les rétroviseurs noirs et le sabot de protection avant.">
+            <img class="sy-card-img" src="/src/assets/images/catalogue/landwind-x5.webp" alt="Landwind X5, SUV, Blanc pur" width="1200" height="760" />
+            <span class="sy-card-body">
+              <span class="sy-card-title">Landwind X5</span>
+              <span class="sy-card-text">SUV · Blanc pur</span>
+              <span class="sy-card-status sy-badge">Prix sur demande</span>
+              <span class="sy-card-cta">Voir la fiche <span aria-hidden="true">→</span></span>
+            </span>
+          </button>
+          <button class="sy-card" type="button" data-cat="citadine" data-vehicle="Toyota Yaris L" data-body="Citadine Compacte" data-color="Blanc pur" data-angle="Profil trois-quarts avant" data-desc="Silhouette compacte 5 portes, calandre trapézoïdale noire, optiques effilées et jantes alliage argentées.">
+            <img class="sy-card-img" src="/src/assets/images/catalogue/toyota-yaris-l.webp" alt="Toyota Yaris L, Citadine Compacte, Blanc pur" width="1200" height="760" />
+            <span class="sy-card-body">
+              <span class="sy-card-title">Toyota Yaris L</span>
+              <span class="sy-card-text">Citadine Compacte · Blanc pur</span>
+              <span class="sy-card-status sy-badge">Prix sur demande</span>
+              <span class="sy-card-cta">Voir la fiche <span aria-hidden="true">→</span></span>
+            </span>
+          </button>
+          <button class="sy-card" type="button" data-cat="suv" data-vehicle="Mazda CX-5" data-body="SUV" data-color="Noir profond" data-angle="Profil trois-quarts avant" data-desc="Teinte noir brillant, entourage de calandre chromé et jantes alliage 5 branches doubles.">
+            <img class="sy-card-img" src="/src/assets/images/catalogue/mazda-cx-5.webp" alt="Mazda CX-5, SUV, Noir profond" width="1200" height="760" />
+            <span class="sy-card-body">
+              <span class="sy-card-title">Mazda CX-5</span>
+              <span class="sy-card-text">SUV · Noir profond</span>
+              <span class="sy-card-status sy-badge">Prix sur demande</span>
+              <span class="sy-card-cta">Voir la fiche <span aria-hidden="true">→</span></span>
+            </span>
+          </button>
+          <button class="sy-card" type="button" data-cat="4x4" data-vehicle="Jetour Traveller T2" data-body="4x4 Tout-Terrain" data-color="Blanc &amp; Noir" data-angle="Profil trois-quarts avant" data-desc="Design baroudeur angulaire, galerie de toit avec rampes LED intégrées, pare-chocs renforcé noir et pneus tout-terrain.">
+            <img class="sy-card-img" src="/src/assets/images/catalogue/jetour-traveller-t2.webp" alt="Jetour Traveller T2, 4x4 Tout-Terrain, Blanc &amp; Noir" width="1200" height="760" />
+            <span class="sy-card-body">
+              <span class="sy-card-title">Jetour Traveller T2</span>
+              <span class="sy-card-text">4x4 Tout-Terrain · Blanc &amp; Noir</span>
+              <span class="sy-card-status sy-badge">Prix sur demande</span>
+              <span class="sy-card-cta">Voir la fiche <span aria-hidden="true">→</span></span>
+            </span>
+          </button>
         </div>
 
         <div class="sy-actions">
@@ -126,6 +206,42 @@
         </div>
       </div>
     </footer>
+    <dialog id="vehicle-dialog" class="sy-dialog sy-dialog--vehicle" aria-labelledby="vehicle-dialog-title">
+      <div class="sy-dialog-inner">
+        <div class="sy-dialog-head">
+          <div>
+            <span class="sy-eyebrow">Fiche véhicule</span>
+            <h2 id="vehicle-dialog-title">Véhicule</h2>
+          </div>
+          <button class="sy-dialog-close" type="button" data-vehicle-close aria-label="Fermer la fiche véhicule">×</button>
+        </div>
+        <img class="sy-vehicle-img" data-vehicle-image src="" alt="" width="1200" height="760" />
+        <dl class="sy-vehicle-meta">
+          <div>
+            <dt>Carrosserie</dt>
+            <dd data-vehicle-body>—</dd>
+          </div>
+          <div>
+            <dt>Teinte visible</dt>
+            <dd data-vehicle-color>—</dd>
+          </div>
+          <div>
+            <dt>Angle du visuel</dt>
+            <dd data-vehicle-angle>—</dd>
+          </div>
+          <div>
+            <dt>Prix</dt>
+            <dd>Sur demande</dd>
+          </div>
+        </dl>
+        <p class="sy-vehicle-desc" data-vehicle-desc></p>
+        <div class="sy-dialog-actions">
+          <button class="sy-btn sy-btn--quiet" type="button" data-vehicle-close>Fermer</button>
+          <a class="sy-btn sy-btn--primary" data-vehicle-whatsapp href="https://wa.me/22673366363" target="_blank" rel="noopener noreferrer">Demander le prix sur WhatsApp</a>
+        </div>
+        <p class="sy-form-note">Les caractéristiques proviennent du catalogue visuel SHA-YO AUTO. Le prix et la disponibilité sont confirmés directement par notre équipe.</p>
+      </div>
+    </dialog>
     <dialog id="quote-dialog" class="sy-dialog" aria-labelledby="quote-dialog-title">
       <form id="quote-form" class="sy-dialog-inner" novalidate>
         <div class="sy-dialog-head">
