@@ -14,12 +14,14 @@ DST = os.path.join("src", "assets", "images", "brands")
 
 BRANDS = [
     ("audi", "audi.png"),
+    ("bmw", "bmw-logo.png"),
     ("byd", "BYD-Logo.png"),
     ("changan", "changan.png"),
     ("exeed", "exceed.png"),
     ("honda", "honda.png"),
     ("jetour", "lg-698eea37900fd-Jetour.webp"),
     ("land-rover", "landrover.png"),
+    ("lexus", "lexus-logo-png_seeklogo-83673.png"),
     ("mazda", "Mazda_logo.png"),
     ("mercedes-benz", "mercedes.png"),
     ("toyota", "Toyota_logo.png"),
