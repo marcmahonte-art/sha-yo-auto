@@ -1,0 +1,127 @@
+cat > /home/user/shayo/design.md <<'EOF'
+# SHA-YO AUTO — Design system du showroom web
+
+**Version 1.0 · Direction artistique et spécifications d’intégration**  
+**Positionnement :** showroom automobile premium et services automobiles à Ouagadougou.
+
+## 1. Marque et direction artistique
+
+Le site doit donner la priorité aux véhicules et à la prise de contact. Le logo apporte le caractère de la marque : un écusson, une silhouette de voiture classique et un bandeau rouge. L’interface reprend ce contraste sans répéter l’écusson ni les étoiles dans les composants. Fonds clairs, typographie nette, espaces généreux et photos de véhicules réels composent l’essentiel de la page. Éviter le doré systématique, les effets chromés et les dégradés décoratifs.
+
+- **Signature éditoriale :** « L’automobile autrement. » À utiliser dans le hero ou les communications de marque.
+- **Signature de marque :** « Qualité, confiance, élégance. » À utiliser dans la section À propos ou dans le pied de page. Ne pas empiler les deux signatures dans le hero.
+- **Ton :** professionnel, direct et rassurant. Décrire des faits concrets : modèle, état, kilométrage, emplacement et modalités de visite. Ne pas promettre de garantie, de délai administratif ou de financement sans validation.
+- **Vision institutionnelle :** sous la direction d’Abdoul Rachid Ouédraogo, SHA-YO AUTO ambitionne de construire une entreprise durable, reconnue d’abord au Burkina Faso, puis dans la sous-région et à terme sur le continent africain. Présenter cette expansion comme une ambition, pas comme un réseau déjà établi.
+
+## 2. Logo
+
+**Référence :** fichier JPEG fourni, 958 × 958 px. Conserver sa composition, ses couleurs, son ratio et la mention « BUSINESS AUTOMOBILE ». Ne pas redessiner, recolorer ni détourer l’original pour l’intégration initiale.
+
+- **Fond privilégié :** blanc pur, raccord avec le fond du fichier. Dans un bandeau sombre, placer le logo dans un cartouche blanc plutôt que d’inverser ses couleurs.
+- **Dimensions proposées :** 88 px de large dans l’en-tête mobile, 112 px sur ordinateur et 160 px dans la section À propos. Sous 112 px, ne pas compter sur la lisibilité de la petite mention : conserver le nom « SHA-YO AUTO » en texte visible dans l’en-tête compact.
+- **Zone de protection :** garder au minimum `⅛` de la largeur affichée autour de la boîte du logo, sans texte, trait ni autre élément.
+- **Intégration :** lien vers l’accueil avec un nom accessible unique. Si « SHA-YO AUTO » est déjà visible dans le même lien, utiliser `alt=""` pour l’image afin d’éviter l’annonce en double.
+- **À faire valider avant production :** obtenir un SVG officiel et une variante compacte officielle pour le favicon. Ne pas réduire le logo complet à 16 px.
+
+## 3. Couleurs et tokens
+
+Les couleurs du logo sont des approximations relevées sur le JPEG : rouge `#D44334`, charbon `#424240`, blanc `#FFFFFF`, magenta `#A31953` sur le filet inférieur. Le magenta reste réservé au logo. Le rouge d’interface, légèrement plus sombre, rend les boutons plus lisibles et laisse le rouge original propre à l’identité.
+
+| Token | Valeur | Usage |
+|---|---|---|
+| `--color-bg` | `#F7F6F3` | Fond général ivoire |
+| `--color-surface` | `#FFFFFF` | Cartes, formulaires, en-tête |
+| `--color-ink` | `#181917` | Titres, texte principal et fond du pied de page |
+| `--color-muted` | `#5E5D58` | Métadonnées et texte secondaire sur fond clair |
+| `--color-border` | `#DDDAD4` | Séparateurs décoratifs, jamais seul indice d’interaction |
+| `--color-control` | `#8A8881` | Bordure des champs sur blanc ou ivoire |
+| `--color-accent` | `#B73226` | Action principale, liens soulignés et états actifs sur fond clair |
+| `--color-accent-hover` | `#92261D` | Survol des boutons primaires |
+| `--color-on-accent` | `#FFFFFF` | Texte des boutons rouges |
+| `--color-focus` | `#181917` | Anneau de focus sur surface claire |
+
+**Contrastes calculés :** blanc sur rouge d’action **6,00:1** ; gris secondaire sur ivoire **6,11:1** ; anthracite sur ivoire **16,33:1** ; bordure de champ sur ivoire **3,28:1**. Sur fond anthracite, utiliser du texte blanc, ainsi qu’un anneau de focus blanc. Vérifier aussi les contrastes des états et des éventuels textes sur image avant publication.
+
+## 4. Typographie, grille et espacements
+
+**Titres :** Manrope (700–800), pour une voix contemporaine et corporate. **Textes et interface :** Inter (400–600), avec `system-ui, sans-serif` en repli pour les deux familles. Les majuscules sont réservées au nom de marque ou aux courts surtitres. Utiliser `font-variant-numeric: tabular-nums` pour les prix et caractéristiques alignés.
+
+| Style | Mobile | Ordinateur | Graisse |
+|---|---:|---:|---:|
+| H1 | 40 / 44 px | 64 / 68 px | 800 |
+| H2 | 30 / 36 px | 42 / 48 px | 750 |
+| H3 | 22 / 28 px | 24 / 30 px | 700 |
+| Corps | 16 / 26 px | 16 / 26 px | 400 |
+| Label et métadonnée | 14 / 20 px | 14 / 20 px | 500–600 |
+
+```css
+:root {
+  --color-bg: #f7f6f3;
+  --color-surface: #fff;
+  --color-ink: #181917;
+  --color-muted: #5e5d58;
+  --color-border: #dddad4;
+  --color-control: #8a8881;
+  --color-accent: #b73226;
+  --color-accent-hover: #92261d;
+  --color-on-accent: #fff;
+  --color-focus: #181917;
+  --font-heading: Manrope, system-ui, sans-serif;
+  --font-body: Inter, system-ui, sans-serif;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-24: 6rem;
+  --radius-control: 0.375rem;
+  --radius-card: 0.75rem;
+  --container-max: 80rem;
+  --target-min: 2.75rem;
+}
+```
+
+**Grille responsive :** 4 colonnes sous 768 px, 8 de 768 à 1199 px, 12 à partir de 1200 px. Marges extérieures de 16 / 24 / 32 px et gouttières de 16 / 24 / 24 px. Le catalogue affiche 1 / 2 / 3 cartes par rangée. Prévoir 48 à 96 px entre les grandes sections et limiter les paragraphes à environ 65 caractères par ligne. Garder des bordures fines et peu ou pas d’ombre.
+
+## 5. Composants et comportements
+
+| Composant | Spécification |
+|---|---|
+| **En-tête** | Logo et nom de marque à gauche. Navigation : Showroom, Services, À propos, Contact. Le bouton WhatsApp est visible sur ordinateur ; sur mobile, il reste accessible dans le menu et dans le contenu. Marquer la page courante avec `aria-current="page"`. |
+| **Hero** | Texte et véhicule côte à côte sur ordinateur, texte puis photo sur mobile. H1 : « L’automobile autrement. » Sous-titre : « Véhicules neufs, d’occasion et de luxe à Ouagadougou. » Action principale : « Voir les véhicules ». Action secondaire : « Nous contacter sur WhatsApp ». |
+| **Boutons et liens** | Principal rouge avec texte blanc ; secondaire blanc avec contour anthracite ; lien de texte souligné. Hauteur cible minimum 44 px. Prévoir les états normal, survol, focus, pressé et désactivé ; aucun état ne se distingue par la couleur seule. Pour le focus, contour de 2 px avec décalage de 3 px. |
+| **Carte véhicule** | Photo 4:3, marque et modèle, année, kilométrage et transmission si renseignés. Afficher le prix en FCFA ou « Prix sur demande ». Afficher « Disponible », « Réservé » ou « Vendu » seulement si l’état est renseigné. Lien « Voir la fiche » avec le modèle dans son nom accessible. |
+| **Filtres showroom** | Marque, état (neuf / occasion), catégorie (dont luxe), budget et point de vente. Luxe est une catégorie et non un état. Afficher le nombre de résultats et « Réinitialiser les filtres ». En mobile, utiliser un panneau accessible au clavier avec retour du focus à la fermeture. |
+| **Fiche véhicule** | Galerie, données techniques, prix, statut, point de vente et action « Demander des informations ». Masquer les caractéristiques inconnues plutôt que d’afficher des valeurs fictives. Ne pas afficher de bouton de réservation si aucun processus n’est en place. |
+| **Bloc services** | Quatre cartes, une icône linéaire et un court texte chacune. Ne pas utiliser systématiquement le rouge pour les icônes. |
+| **Points de vente** | Nom, quartier, adresse ou code Plus, horaires connus, téléphone, puis lien « Itinéraire ». Sur mobile, privilégier un lien vers la carte plutôt qu’une carte intégrée lourde. |
+
+**Les quatre intitulés de service :** Vente de véhicules et d’accessoires · Transit et dédouanement · Plaques d’immatriculation et cartes grises · Entretien et conseil.
+
+**États du catalogue :** chargement avec squelettes stables, erreur avec « Réessayer », aucun résultat avec « Aucun véhicule ne correspond à ces filtres » et bouton de réinitialisation. Annoncer la mise à jour du nombre de résultats aux lecteurs d’écran sans déplacer le focus.
+
+## 6. Photographie et accessibilité
+
+- Utiliser des photos fidèles au stock : vue avant trois quarts en couverture, puis profil, arrière, intérieur et détails. Ne pas substituer la photo d’un autre véhicule sans l’identifier comme illustration.
+- Garder le véhicule entier dans le cadrage principal ; vérifier les recadrages mobiles. Favoriser la lumière naturelle, les fonds sobres et une retouche légère qui ne masque pas l’état réel. Flouter les informations personnelles visibles si nécessaire.
+- Livrer les photos en AVIF ou WebP, avec variantes responsives et dimensions explicites. Charger la photo principale sans retard artificiel ; différer les images hors écran. Éviter les vidéos automatiques et les carrousels imposés.
+- Viser WCAG 2.2 AA : structure de titres cohérente, lien d’évitement, navigation clavier, focus visible et non masqué par les éléments fixes, textes alternatifs utiles, labels de formulaires explicites et réduction des mouvements selon `prefers-reduced-motion`. Une photo informative peut avoir pour texte alternatif « Vue avant trois quarts du véhicule [marque et modèle] » ; une image purement décorative utilise `alt=""`.
+
+## 7. Pages, coordonnées et publication
+
+**Ordre recommandé de l’accueil :** hero → véhicules disponibles → services → points de vente → présentation de l’entreprise → pied de page. Pages autonomes : Showroom, Fiche véhicule, Services, À propos, Contact.
+
+| Point de vente | Informations fournies | Action |
+|---|---|---|
+| **Dassasgo** | Boulevard des Tensoba, Dassasgo (`9G8C+PG`), Ouagadougou. Lundi–samedi, 8 h–20 h. | [WhatsApp +226 73 36 63 63](https://wa.me/22673366363) · [Appeler](tel:+22673366363) |
+| **Wemtenga** | Wemtenga (`9GFC+PXF`), Ouagadougou. Horaires non communiqués. | [WhatsApp +226 64 64 93 49](https://wa.me/22664649349) · [Appeler](tel:+22664649349) |
+| **Ouaga 2000** | Parc mentionné dans une annonce d’octobre 2026 signalée par le client, sur les deux voies près de Zind Naaba Appart. | Ne pas afficher comme site ouvert avant confirmation de l’ouverture, du nom commercial, de l’adresse exacte et des services disponibles. |
+
+**WhatsApp principal :** `https://wa.me/22673366363`. Depuis une fiche, router vers le numéro du point de vente s’il est renseigné ; à défaut, utiliser le numéro principal. Préremplir un message court avec le modèle et la référence de l’annonce si elle existe. **Lien social fourni :** [SHA-YO AUTO sur Facebook](https://web.facebook.com/Yochilechampiom).
+
+**Avant mise en ligne :** valider les coordonnées publiques, les horaires, les itinéraires, les prix et la disponibilité ; vérifier le parcours catalogue → fiche → WhatsApp à 360, 768 et 1440 px, ainsi qu’au clavier ; contrôler que les textes et les badges restent lisibles au zoom et que chaque photo correspond au bon véhicule.
+EOF
+ls -lh /home/user/shayo/design.md && wc -l /home/user/shayo/design.md && grep -n '^## ' /home/user/shayo/design.md

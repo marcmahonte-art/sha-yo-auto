@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#f7f6f3" />
+    <title>Catalogue — SHA-YO AUTO</title>
+    <meta name="description" content="Catalogue public SHA-YO AUTO : véhicules neufs, d’occasion et de luxe à Ouagadougou. Aucune donnée commerciale n’est publiée sans validation." />
+    <meta property="og:title" content="Catalogue — SHA-YO AUTO" />
+    <meta property="og:description" content="Catalogue public SHA-YO AUTO : véhicules neufs, d’occasion et de luxe à Ouagadougou. Aucune donnée commerciale n’est publiée sans validation." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:site_name" content="SHA-YO AUTO" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/png" href="/src/assets/images/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" />
+    <link rel="stylesheet" href="/src/sections.css" />
+  </head>
+  <body class="sy-body">
+    <a class="sy-skip-link" href="#contenu">Aller au contenu</a>
+    <header class="sy-header shopify-section-group-header-group" id="top">
+      <div class="sy-header-inner">
+        <a class="sy-brand" href="index.html" aria-label="SHA-YO AUTO, retour à l’accueil">
+          <img src="/src/assets/images/logo.png" alt="" width="48" height="48" />
+          <span class="sy-brand-text"><strong>SHA-YO AUTO</strong><span>Ouagadougou</span></span>
+        </a>
+        <nav class="sy-nav" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="showroom.html">Showroom</a>
+        <a href="catalogue.html" aria-current="page">Catalogue</a>
+        <a href="services.html">Services</a>
+        <a href="a-propos.html">À propos</a>
+        <a href="index.html#nous-trouver">Nous trouver</a>
+        </nav>
+        <div class="sy-header-actions">
+          <a class="sy-btn sy-btn--primary" href="https://wa.me/22673366363" target="_blank" rel="noopener noreferrer" aria-label="Contacter SHA-YO AUTO sur WhatsApp">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l4.9-1.3A10 10 0 1 0 12 2Z" /><path d="M8.5 8.5c.3-.7.7-.7 1-.7h.6c.2 0 .5 0 .7.5l.8 1.8c.1.3 0 .5-.1.7l-.4.5c.2.4.5.8.9 1.2.4.4.8.7 1.2.9l.5-.4c.2-.2.4-.2.7-.1l1.8.8c.4.2.5.4.5.7v.6c0 .4-.1.8-.8 1.1-.5.3-1.1.3-1.6.1-2.4-.8-4.2-2.6-5-5-.2-.5-.2-1.1.1-1.6Z" /></svg>
+            <span>WhatsApp</span>
+          </a>
+          <button class="sy-icon-btn" id="open-bag" type="button" aria-label="Ouvrir votre sélection">
+            <svg viewBox="0 0 24 26" aria-hidden="true"><path d="M4 8h16l1 16H3L4 8zM8 8V6a4 4 0 0 1 8 0v2" /></svg>
+            <span data-cart-count>0</span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <section class="sy-intro">
+      <div class="sy-wrap sy-intro-grid">
+        <div>
+          <span class="sy-eyebrow">Catalogue</span>
+          <h1 class="sy-h1">Découvrez notre sélection</h1>
+        </div>
+        <p class="sy-lead">Véhicules neufs, d’occasion et de luxe à Ouagadougou. Les véhicules sont publiés ici dès que leur état, leurs caractéristiques et leur prix sont validés.</p>
+      </div>
+    </section>
+    <section id="catalogue" class="sy-section" aria-labelledby="catalogue-title">
+      <div class="sy-wrap">
+        <div class="sy-section-head">
+          <div>
+            <span class="sy-eyebrow">Véhicules disponibles</span>
+            <h2 class="sy-h2" id="catalogue-title">Catalogue public</h2>
+          </div>
+          <p class="sy-lead" id="catalogue-count" aria-live="polite">0 véhicule publié</p>
+        </div>
+        <div class="sy-filters" role="group" aria-label="Filtrer les véhicules">
+          <button class="sy-filter" type="button" data-filter="all" aria-pressed="true">Tous</button>
+          <button class="sy-filter" type="button" data-filter="neuf" aria-pressed="false">Neufs</button>
+          <button class="sy-filter" type="button" data-filter="occasion" aria-pressed="false">Occasion</button>
+          <button class="sy-filter" type="button" data-filter="luxe" aria-pressed="false">Luxe</button>
+          <button class="sy-filter sy-btn sy-btn--quiet" type="button" data-filter-reset>Réinitialiser les filtres</button>
+        </div>
+        <div class="sy-grid sy-grid--cols-1 md:sy-grid--cols-2 lg:sy-grid--cols-3 gap-6">
+          <div class="sy-card">
+            <img src="/src/assets/images/vehicles/veh1.jpg" alt="Vehicle 1" class="sy-card-img"/>
+            <div class="sy-card-body">
+              <h3 class="sy-card-title">Toyota Corolla 2020</h3>
+              <p class="sy-card-text">Km: 35 000 | Transmission: Automatique</p>
+              <p class="sy-card-price">FCFA 12 500 000</p>
+              <p class="sy-card-status sy-badge sy-badge--success">Disponible</p>
+              <a class="sy-btn sy-btn--primary" href="https://wa.me/22673366363?text=Bonjour%20SHA-YO%20AUTO%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20le%20Toyota%20Corolla%202020" target="_blank" rel="noopener noreferrer">Contacter</a>
+            </div>
+          </div>
+          <!-- Additional vehicle cards can be added here -->
+        </div>
+          
+          
+          <a class="sy-btn sy-btn--primary" href="https://wa.me/22673366363?text=Bonjour%20SHA-YO%20AUTO%2C%20quels%20v%C3%A9hicules%20sont%20actuellement%20disponibles%20%3F" target="_blank" rel="noopener noreferrer">Demander la sélection disponible</a>
+        </div>
+        <div class="sy-actions">
+          <button class="sy-btn sy-btn--ghost" type="button" data-quote-open data-subject="Demande d’information sur le catalogue">Demander des informations</button>
+        </div>
+      </div>
+    </section>
+    <footer class="sy-footer" id="contact">
+      <div class="sy-wrap">
+        <div class="sy-footer-grid">
+          <div class="sy-footer-brand">
+            <a class="sy-brand" href="index.html" aria-label="SHA-YO AUTO, retour à l’accueil">
+              <img src="/src/assets/images/logo.png" alt="" width="48" height="48" />
+              <span class="sy-brand-text"><strong>SHA-YO AUTO</strong><span>Ouagadougou</span></span>
+            </a>
+            <p>Vente de véhicules neufs, d’occasion et de luxe, accessoires et services automobiles à Ouagadougou.</p>
+            <p class="sy-footer-sign">Qualité, confiance, élégance.</p>
+          </div>
+          <div>
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="showroom.html">Showroom</a></li>
+              <li><a href="catalogue.html">Catalogue</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="a-propos.html">À propos</a></li>
+              <li><a href="index.html#nous-trouver">Nous trouver</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <address>
+              Boulevard des Tensoba, Dassasgo<br />
+              (9G8C+PG), Ouagadougou<br />
+              Lundi–samedi, 8 h–20 h
+            </address>
+            <ul>
+              <li><a href="https://wa.me/22673366363" target="_blank" rel="noopener noreferrer">WhatsApp · +226 73 36 63 63</a></li>
+              <li><a href="tel:+22673366363">Appeler</a></li>
+              <li><a href="https://web.facebook.com/Yochilechampiom" target="_blank" rel="noopener noreferrer">SHA-YO AUTO sur Facebook</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="sy-footer-bottom">
+          <p>© 2026 SHA-YO AUTO · Ouagadougou, Burkina Faso</p>
+          <p>L’automobile autrement.</p>
+        </div>
+      </div>
+    </footer>
+    <dialog id="quote-dialog" class="sy-dialog" aria-labelledby="quote-dialog-title">
+      <form id="quote-form" class="sy-dialog-inner" novalidate>
+        <div class="sy-dialog-head">
+          <div>
+            <h2 id="quote-dialog-title">Demander un devis</h2>
+            <p>Votre message est préparé dans WhatsApp, sans quitter le site.</p>
+          </div>
+          <button class="sy-dialog-close" type="button" data-quote-close aria-label="Fermer la fenêtre">×</button>
+        </div>
+        <div class="sy-form-grid">
+          <div class="sy-field">
+            <label for="quote-name">Nom <span aria-hidden="true">*</span></label>
+            <input id="quote-name" name="name" type="text" autocomplete="name" required />
+            <p class="sy-error" aria-live="polite"></p>
+          </div>
+          <div class="sy-field">
+            <label for="quote-phone">Téléphone <span aria-hidden="true">*</span></label>
+            <input id="quote-phone" name="phone" type="tel" autocomplete="tel" required />
+            <p class="sy-error" aria-live="polite"></p>
+          </div>
+        </div>
+        <div class="sy-field">
+          <label for="quote-subject">Objet</label>
+          <input id="quote-subject" name="subject" type="text" value="Demande d’information" />
+        </div>
+        <div class="sy-field">
+          <label for="quote-message">Message</label>
+          <textarea id="quote-message" name="message"></textarea>
+        </div>
+        <div class="sy-dialog-actions">
+          <button class="sy-btn sy-btn--quiet" type="button" data-quote-close>Annuler</button>
+          <button class="sy-btn sy-btn--primary" type="submit">Envoyer sur WhatsApp</button>
+        </div>
+        <p class="sy-form-note">Champs obligatoires : nom et téléphone. Aucune demande n’est envoyée depuis cette page sans votre validation dans WhatsApp.</p>
+      </form>
+    </dialog>
+    <div id="sy-status" class="sy-status" role="status" aria-live="polite"></div>
+    <script type="module" src="/src/site.js"></script>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+{
+  "name": "Le Showroom — Maison Auto",
+  "description": "Six véhicules d’exception, configurés dans les moindres détails. Explorez le showroom, isolez un modèle et touchez un repère pour configurer l’équipement.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
