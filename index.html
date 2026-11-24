@@ -24,19 +24,23 @@
     <header class="site-header shopify-section-group-header-group" id="top">
       <a href="index.html" class="brand" aria-label="SHA-YO AUTO, retour à l’accueil">SHA-YO AUTO</a>
       <nav aria-label="Navigation principale">
-      <a href="index.html" aria-current="page">Accueil</a>
-      <a href="#showroom">Showroom</a>
-      <a href="catalogue.html">Catalogue</a>
-      <a href="services.html">Services</a>
-      <a href="a-propos.html">À propos</a>
-
+        <a href="index.html" aria-current="page">Accueil</a>
+        <a href="showroom.html">Showroom</a>
+        <a href="catalogue.html">Catalogue</a>
+        <a href="services.html">Services</a>
+        <a href="a-propos.html">À propos</a>
       </nav>
-      <button id="open-bag" type="button" aria-label="Ouvrir votre sélection">
-        <svg width="22" height="24" viewBox="0 0 24 26" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true">
-          <path d="M4 8h16l1 16H3L4 8zM8 8V6a4 4 0 0 1 8 0v2" />
-        </svg>
-        <span data-cart-count>0</span>
-      </button>
+      <div class="header-actions">
+        <a class="header-action" href="https://wa.me/22673366363" target="_blank" rel="noopener noreferrer" aria-label="Contacter SHA-YO AUTO sur WhatsApp">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l4.9-1.3A10 10 0 1 0 12 2Z" /><path d="M8.5 8.5c.3-.7.7-.7 1-.7h.6c.2 0 .5 0 .7.5l.8 1.8c.1.3 0 .5-.1.7l-.4.5c.2.4.5.8.9 1.2.4.4.8.7 1.2.9l.5-.4c.2-.2.4-.2.7-.1l1.8.8c.4.2.5.4.5.7v.6c0 .4-.1.8-.8 1.1-.5.3-1.1.3-1.6.1-2.4-.8-4.2-2.6-5-5-.2-.5-.2-1.1.1-1.6Z" /></svg>
+        </a>
+        <button id="open-bag" type="button" aria-label="Ouvrir votre sélection">
+          <svg width="22" height="24" viewBox="0 0 24 26" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true">
+            <path d="M4 8h16l1 16H3L4 8zM8 8V6a4 4 0 0 1 8 0v2" />
+          </svg>
+          <span data-cart-count>0</span>
+        </button>
+      </div>
     </header>
     <h1 class="sy-sr-only">SHA-YO AUTO — L’automobile autrement.</h1>
 <main id="showroom">
@@ -1534,7 +1538,7 @@
             <div><h3>Un contact direct</h3><p>Un numéro WhatsApp unique pour préparer une demande, au +226 73 36 63 63.</p></div>
           </article>
         </div>
-        <p class="sy-note">Aucun logo, partenariat ou référence client n’est publié sans validation préalable.</p>
+        <p class="sy-note">Aucun partenariat ou référence client n’est publié sans validation préalable.</p>
         <div class="sy-actions">
           <button class="sy-btn sy-btn--primary" type="button" data-quote-open data-subject="Demande d’information">Demander des informations</button>
         </div>
@@ -1547,7 +1551,7 @@
             <span class="sy-eyebrow">Sélection</span>
             <h2 class="sy-h2" id="marques-title">Nos marques et collections</h2>
           </div>
-          <p class="sy-lead">Les collections annoncées par SHA-YO AUTO, sans visuel ni marque ajoutés artificiellement.</p>
+          <p class="sy-lead">Une sélection de marques représentées dans notre offre automobile.</p>
         </div>
         <h3 class="sy-h3">Collections</h3>
         <div class="sy-brand-line" style="margin-top:16px">
@@ -1557,12 +1561,35 @@
           <span class="sy-pill">Accessoires automobiles</span>
         </div>
         <h3 class="sy-h3" style="margin-top:40px">Marques</h3>
-        <div class="sy-empty" style="margin-top:16px">
-          <h3>Liste des marques en attente de validation</h3>
-          <p>Les marques réellement présentes dans le parc seront publiées après vérification du stock. Aucune marque n’est avancée à partir des configurations d’illustration du Showroom.</p>
-          <a class="sy-btn sy-btn--ghost" href="https://wa.me/22673366363?text=Bonjour%20SHA-YO%20AUTO%2C%20quelles%20marques%20sont%20actuellement%20disponibles%20%3F" target="_blank" rel="noopener noreferrer">Demander la liste des marques</a>
+        <div class="sy-marquee" role="group" aria-label="Marques représentées">
+          <div class="sy-marquee__track">
+            <div class="sy-marquee__group">
+              <img src="/src/assets/images/brands/brand-audi.webp" alt="Audi" width="140" height="40" />
+              <img src="/src/assets/images/brands/brand-byd.webp" alt="BYD" width="140" height="40" />
+              <img src="/src/assets/images/brands/brand-changan.webp" alt="Changan" width="140" height="40" />
+              <img src="/src/assets/images/brands/brand-exeed.webp" alt="EXEED" width="140" height="40" />
+              <img src="/src/assets/images/brands/brand-honda.webp" alt="Honda" width="140" height="40" />
+              <img src="/src/assets/images/brands/brand-jetour.webp" alt="Jetour" width="140" height="40" />
+              <img src="/src/assets/images/brands/brand-land-rover.webp" alt="Land Rover" width="140" height="40" />
+              <img src="/src/assets/images/brands/brand-mazda.webp" alt="Mazda" width="140" height="40" />
+              <img src="/src/assets/images/brands/brand-mercedes-benz.webp" alt="Mercedes-Benz" width="140" height="40" />
+              <img src="/src/assets/images/brands/brand-toyota.webp" alt="Toyota" width="140" height="40" />
+            </div>
+            <div class="sy-marquee__group" aria-hidden="true">
+              <img src="/src/assets/images/brands/brand-audi.webp" alt="" width="140" height="40" />
+              <img src="/src/assets/images/brands/brand-byd.webp" alt="" width="140" height="40" />
+              <img src="/src/assets/images/brands/brand-changan.webp" alt="" width="140" height="40" />
+              <img src="/src/assets/images/brands/brand-exeed.webp" alt="" width="140" height="40" />
+              <img src="/src/assets/images/brands/brand-honda.webp" alt="" width="140" height="40" />
+              <img src="/src/assets/images/brands/brand-jetour.webp" alt="" width="140" height="40" />
+              <img src="/src/assets/images/brands/brand-land-rover.webp" alt="" width="140" height="40" />
+              <img src="/src/assets/images/brands/brand-mazda.webp" alt="" width="140" height="40" />
+              <img src="/src/assets/images/brands/brand-mercedes-benz.webp" alt="" width="140" height="40" />
+              <img src="/src/assets/images/brands/brand-toyota.webp" alt="" width="140" height="40" />
+            </div>
+          </div>
         </div>
-        <p class="sy-note">Consultez le <a class="sy-link" href="showroom.html">Showroom</a> pour découvrir le configurateur.</p>
+        <p class="sy-note" style="margin-top:24px">Consultez le <a class="sy-link" href="showroom.html">Showroom</a> pour découvrir le configurateur.</p>
       </div>
     </section>
     <footer class="sy-footer" id="contact">

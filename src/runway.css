@@ -100,6 +100,49 @@ button:focus-visible, a:focus-visible {
   text-underline-offset: 4px;
 }
 
+.site-header nav a[aria-current="page"] {
+  text-decoration: underline;
+  text-decoration-color: var(--sy-red, #b01820);
+  text-underline-offset: 4px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.header-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: #151413;
+  text-decoration: none;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.header-action:hover {
+  color: var(--sy-red, #b01820);
+}
+
+.header-action svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 #open-bag {
   display: flex;
   align-items: center;
@@ -112,6 +155,10 @@ button:focus-visible, a:focus-visible {
   min-height: 44px;
   cursor: pointer;
   flex-shrink: 0;
+}
+
+#open-bag:hover {
+  color: var(--sy-red, #b01820);
 }
 
 #open-bag [data-cart-count] {
@@ -2011,8 +2058,8 @@ runway-section.rw {
 @media (max-width: 749px) {
   .site-header {
     height: 68px;
-    padding: 0 20px;
-    gap: 18px;
+    padding: 0 16px;
+    gap: 12px;
   }
   .site-header .brand {
     font-size: 13px;
@@ -2020,16 +2067,23 @@ runway-section.rw {
   .site-header nav {
     gap: 14px;
     font-size: 11px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .site-header nav::-webkit-scrollbar {
+    display: none;
   }
   .site-header nav a {
     padding: 15px 0;
+    flex: 0 0 auto;
   }
-  .site-header nav a:nth-child(2),
-  .site-header nav a:nth-child(3) {
-    display: none;
+  .header-actions {
+    gap: 2px;
   }
+  .header-action,
   #open-bag {
-    margin-left: 8px;
+    min-width: 38px;
+    margin-left: 0;
   }
 
   runway-section.rw {

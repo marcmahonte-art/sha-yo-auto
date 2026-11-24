@@ -779,6 +779,67 @@ html {
   font: 500 13px var(--sy-font);
 }
 
+/* Bande de marques : defilement continu de droite a gauche, logos neutralises
+   en gris et contenu dans une boite identique. */
+.sy-marquee {
+  position: relative;
+  margin-top: 16px;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+
+.sy-marquee__track {
+  display: flex;
+  width: max-content;
+  animation: sy-marquee 38s linear infinite;
+}
+
+.sy-marquee:hover .sy-marquee__track,
+.sy-marquee:focus-within .sy-marquee__track {
+  animation-play-state: paused;
+}
+
+.sy-marquee__group {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  padding-right: 56px;
+}
+
+.sy-marquee img {
+  display: block;
+  flex: 0 0 auto;
+  width: 140px;
+  height: 40px;
+  object-fit: contain;
+  filter: grayscale(1) brightness(0) invert(58%);
+}
+
+@keyframes sy-marquee {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-50%, 0, 0); }
+}
+
+@media (max-width: 749px) {
+  .sy-marquee__group {
+    gap: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sy-marquee {
+    overflow-x: auto;
+  }
+  .sy-marquee__track {
+    animation: none;
+  }
+  .sy-marquee__group[aria-hidden="true"] {
+    display: none;
+  }
+}
+
 /* ---------------------------------------------------------------- Formulaires */
 
 .sy-form {
@@ -1077,7 +1138,7 @@ dialog.sy-dialog::backdrop {
   }
 
   .header-action {
-    margin-left: 8px;
+    margin-left: 0;
   }
 
   .sy-wrap {
