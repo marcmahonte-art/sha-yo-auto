@@ -18,7 +18,7 @@ function status(message) {
 
 function initCatalogueFilters() {
   const filters = Array.from(document.querySelectorAll('.sy-filter[data-filter]'));
-  const cards = Array.from(document.querySelectorAll('.sy-card[data-cat]'));
+  const cards = Array.from(document.querySelectorAll('.sy-card'));
   if (!filters.length) return;
 
   const countEl = document.getElementById('catalogue-count');

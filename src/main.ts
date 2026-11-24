@@ -52,48 +52,48 @@ const CAR_AR = 1.58;
 const CATALOG: CatalogData = {
   looks: [
     {
-      name: 'Porsche 911 GT3 RS',
-      description: 'Configuration circuit Weissach.',
-      image: '/src/assets/images/car_porsche_gt3_1795459062880.jpg',
+      name: 'Toyota Camry SE Hybrid',
+      description: 'Berline, blanc nacré — finition SE hybride.',
+      image: '/src/assets/images/showroom-toyota-camry-se-hybrid.webp',
       products: ['gt3-jantes', 'gt3-sellerie', 'gt3-aero'],
     },
     {
-      name: 'Ferrari 296 GTB',
-      description: 'Coupé hybride V6 Rosso Corsa.',
-      image: '/src/assets/images/car_ferrari_296_1795459062683.jpg',
+      name: 'Skynomad SUV',
+      description: 'Grand SUV, gris anthracite.',
+      image: '/src/assets/images/showroom-skynomad-suv.webp',
       products: ['296-jantes', '296-sellerie', '296-aero'],
     },
     {
-      name: 'Aston Martin DB12',
-      description: 'Super Tourer Vert Racing.',
-      image: '/src/assets/images/car_aston_vantage_1795459064488.jpg',
+      name: 'Changan UNI-V',
+      description: 'Berline fastback, gris foncé.',
+      image: '/src/assets/images/showroom-changan-uni-v.webp',
       products: ['db12-jantes', 'db12-sellerie', 'db12-aero'],
     },
     {
-      name: 'Lamborghini Huracán STO',
-      description: 'V10 atmosphérique homologué piste.',
-      image: '/src/assets/images/car_lambo_tecnica_1795459064265.jpg',
+      name: 'Landwind X7 2.0T',
+      description: 'SUV compact, or / bronze métallisé.',
+      image: '/src/assets/images/showroom-landwind-x7-2-0t.webp',
       products: ['sto-jantes', 'sto-sellerie', 'sto-aero'],
     },
     {
-      name: 'Berline GT Électrique',
-      description: 'Grand Tourisme zéro émission.',
-      image: '/src/assets/images/car_audi_etron_1795459064488.jpg',
+      name: 'Mazda CX-5',
+      description: 'SUV, noir profond.',
+      image: '/src/assets/images/showroom-mazda-cx-5.webp',
       products: ['gt-ev-jantes', 'gt-ev-sellerie', 'gt-ev-aero'],
     },
     {
-      name: 'Aston Martin DB11 V8',
-      description: 'Coupé GT Bleu Nuit.',
-      image: '/src/assets/images/car_amg_gt_1795459065093.jpg',
+      name: 'Jetour Traveller T2',
+      description: '4x4 tout-terrain, blanc & noir.',
+      image: '/src/assets/images/showroom-jetour-traveller-t2.webp',
       products: ['db11-jantes', 'db11-sellerie', 'db11-aero'],
     },
   ],
   items: [
     {
       id: 'gt3-jantes',
-      name: 'Jantes Forgées Magnésium',
-      type: 'Atelier Weissach',
-      modelName: 'Porsche 911 GT3 RS',
+      name: 'Jantes alliage',
+      type: 'Train roulant',
+      modelName: 'Toyota Camry SE Hybrid',
       price: 6800,
       image: '/src/assets/images/part_forged_wheel_1795459065168.jpg',
       sizes: ['20" / 21"', '21" / 22"', 'Magnésium'],
@@ -105,9 +105,9 @@ const CATALOG: CatalogData = {
     },
     {
       id: 'gt3-sellerie',
-      name: 'Sellerie Baquet Carbone',
-      type: 'Sellerie Sur Mesure',
-      modelName: 'Porsche 911 GT3 RS',
+      name: 'Sellerie et habillage',
+      type: 'Habitacle',
+      modelName: 'Toyota Camry SE Hybrid',
       price: 5400,
       image: '/src/assets/images/part_sport_seat_1795459064793.jpg',
       sizes: ['Alcantara Noir', 'Cuir Craie', 'Race-Tex GT'],
@@ -119,9 +119,9 @@ const CATALOG: CatalogData = {
     },
     {
       id: 'gt3-aero',
-      name: 'Pack Aéro Carbone DRS',
-      type: 'Département Aéro',
-      modelName: 'Porsche 911 GT3 RS',
+      name: 'Kit carrosserie',
+      type: 'Extérieur',
+      modelName: 'Toyota Camry SE Hybrid',
       price: 9800,
       image: '/src/assets/images/part_carbon_aero_1795459065577.jpg',
       sizes: ['Satiné', 'Brillant', 'Carbone Apparent'],
@@ -133,9 +133,9 @@ const CATALOG: CatalogData = {
     },
     {
       id: '296-jantes',
-      name: 'Jantes Forgées Corsa',
-      type: 'Atelier Maranello',
-      modelName: 'Ferrari 296 GTB',
+      name: 'Jantes alliage',
+      type: 'Train roulant',
+      modelName: 'Skynomad SUV',
       price: 7400,
       image: '/src/assets/images/part_forged_wheel_1795459065168.jpg',
       sizes: ['20"', '21"', 'Fibre Carbone'],
@@ -147,9 +147,9 @@ const CATALOG: CatalogData = {
     },
     {
       id: '296-sellerie',
-      name: 'Sièges Racing Carbone',
-      type: 'Sellerie Cuir Pleine Fleur',
-      modelName: 'Ferrari 296 GTB',
+      name: 'Sellerie et habillage',
+      type: 'Habitacle',
+      modelName: 'Skynomad SUV',
       price: 6200,
       image: '/src/assets/images/part_sport_seat_1795459064793.jpg',
       sizes: ['Cuir Nero', 'Rosso Daytona', 'Alcantara'],
@@ -161,9 +161,9 @@ const CATALOG: CatalogData = {
     },
     {
       id: '296-aero',
-      name: 'Pack Fiorano Carbone',
-      type: 'Département Aéro',
-      modelName: 'Ferrari 296 GTB',
+      name: 'Kit carrosserie',
+      type: 'Extérieur',
+      modelName: 'Skynomad SUV',
       price: 11400,
       image: '/src/assets/images/part_carbon_aero_1795459065577.jpg',
       sizes: ['Brillant', 'Satiné', 'Forgé'],
@@ -175,9 +175,9 @@ const CATALOG: CatalogData = {
     },
     {
       id: 'db12-jantes',
-      name: 'Jantes Forgées Y-Spoke',
-      type: 'Atelier Gaydon',
-      modelName: 'Aston Martin DB12',
+      name: 'Jantes alliage',
+      type: 'Train roulant',
+      modelName: 'Changan UNI-V',
       price: 5800,
       image: '/src/assets/images/part_forged_wheel_1795459065168.jpg',
       sizes: ['21"', '22"', 'Bronze Satiné'],
@@ -189,9 +189,9 @@ const CATALOG: CatalogData = {
     },
     {
       id: 'db12-sellerie',
-      name: 'Sellerie Grand Tourisme',
-      type: 'Cuir Bridge of Weir',
-      modelName: 'Aston Martin DB12',
+      name: 'Sellerie et habillage',
+      type: 'Habitacle',
+      modelName: 'Changan UNI-V',
       price: 6400,
       image: '/src/assets/images/part_sport_seat_1795459064793.jpg',
       sizes: ['Cuir Havane', 'Noir Obsidienne', 'Vert Racing'],
@@ -203,9 +203,9 @@ const CATALOG: CatalogData = {
     },
     {
       id: 'db12-aero',
-      name: 'Pack Splitter & Diffuseur',
-      type: 'Département Aéro',
-      modelName: 'Aston Martin DB12',
+      name: 'Kit carrosserie',
+      type: 'Extérieur',
+      modelName: 'Changan UNI-V',
       price: 7800,
       image: '/src/assets/images/part_carbon_aero_1795459065577.jpg',
       sizes: ['2x2 Twill', 'Satiné', 'Noir Laqué'],
@@ -217,9 +217,9 @@ const CATALOG: CatalogData = {
     },
     {
       id: 'sto-jantes',
-      name: 'Jantes Monobloc Hek',
-      type: 'Sant’Agata Forged',
-      modelName: 'Lamborghini Huracán STO',
+      name: 'Jantes alliage',
+      type: 'Train roulant',
+      modelName: 'Landwind X7 2.0T',
       price: 7900,
       image: '/src/assets/images/part_forged_wheel_1795459065168.jpg',
       sizes: ['20"', '21"', 'Magnésium Noir'],
@@ -231,9 +231,9 @@ const CATALOG: CatalogData = {
     },
     {
       id: 'sto-sellerie',
-      name: 'Baquets Monocoque STO',
-      type: 'Atelier Alcantara',
-      modelName: 'Lamborghini Huracán STO',
+      name: 'Sellerie et habillage',
+      type: 'Habitacle',
+      modelName: 'Landwind X7 2.0T',
       price: 5900,
       image: '/src/assets/images/part_sport_seat_1795459064793.jpg',
       sizes: ['Nero Cosmus', 'Grigio Titans', 'Surpiqûres Or'],
@@ -245,9 +245,9 @@ const CATALOG: CatalogData = {
     },
     {
       id: 'sto-aero',
-      name: 'Pack Aéro Cofango Carbone',
-      type: 'Département Aéro',
-      modelName: 'Lamborghini Huracán STO',
+      name: 'Kit carrosserie',
+      type: 'Extérieur',
+      modelName: 'Landwind X7 2.0T',
       price: 12200,
       image: '/src/assets/images/part_carbon_aero_1795459065577.jpg',
       sizes: ['Carbone Mat', 'Carbone Forgé', 'Brillant'],
@@ -259,9 +259,9 @@ const CATALOG: CatalogData = {
     },
     {
       id: 'gt-ev-jantes',
-      name: 'Jantes Aéro Forgées',
-      type: 'Atelier Performance',
-      modelName: 'Berline GT Électrique',
+      name: 'Jantes alliage',
+      type: 'Train roulant',
+      modelName: 'Mazda CX-5',
       price: 4600,
       image: '/src/assets/images/part_forged_wheel_1795459065168.jpg',
       sizes: ['20"', '21"', '22"'],
@@ -273,9 +273,9 @@ const CATALOG: CatalogData = {
     },
     {
       id: 'gt-ev-sellerie',
-      name: 'Sellerie Sport Végane',
-      type: 'Sellerie Sur Mesure',
-      modelName: 'Berline GT Électrique',
+      name: 'Sellerie et habillage',
+      type: 'Habitacle',
+      modelName: 'Mazda CX-5',
       price: 4900,
       image: '/src/assets/images/part_sport_seat_1795459064793.jpg',
       sizes: ['Noir Carbone', 'Blanc Polaire', 'Gris Graphite'],
@@ -287,9 +287,9 @@ const CATALOG: CatalogData = {
     },
     {
       id: 'gt-ev-aero',
-      name: 'Pack Carbone Track',
-      type: 'Département Aéro',
-      modelName: 'Berline GT Électrique',
+      name: 'Kit carrosserie',
+      type: 'Extérieur',
+      modelName: 'Mazda CX-5',
       price: 6500,
       image: '/src/assets/images/part_carbon_aero_1795459065577.jpg',
       sizes: ['Satiné', 'Brillant', 'Mat'],
@@ -301,9 +301,9 @@ const CATALOG: CatalogData = {
     },
     {
       id: 'db11-jantes',
-      name: 'Jantes Forgées 10 Branches',
-      type: 'Atelier Gaydon',
-      modelName: 'Aston Martin DB11 V8',
+      name: 'Jantes alliage',
+      type: 'Train roulant',
+      modelName: 'Jetour Traveller T2',
       price: 5600,
       image: '/src/assets/images/part_forged_wheel_1795459065168.jpg',
       sizes: ['20"', '21"', 'Titane Brossé'],
@@ -315,9 +315,9 @@ const CATALOG: CatalogData = {
     },
     {
       id: 'db11-sellerie',
-      name: 'Sellerie Cuir Capitonnée',
-      type: 'Cuir Pleine Fleur',
-      modelName: 'Aston Martin DB11 V8',
+      name: 'Sellerie et habillage',
+      type: 'Habitacle',
+      modelName: 'Jetour Traveller T2',
       price: 6100,
       image: '/src/assets/images/part_sport_seat_1795459064793.jpg',
       sizes: ['Bleu Nuit', 'Cuir Camel', 'Noir Pur'],
@@ -329,9 +329,9 @@ const CATALOG: CatalogData = {
     },
     {
       id: 'db11-aero',
-      name: 'Pack Carbone Extérieur',
-      type: 'Département Aéro',
-      modelName: 'Aston Martin DB11 V8',
+      name: 'Kit carrosserie',
+      type: 'Extérieur',
+      modelName: 'Jetour Traveller T2',
       price: 8300,
       image: '/src/assets/images/part_carbon_aero_1795459065577.jpg',
       sizes: ['Brillant', 'Satiné', 'Carbone Teinté'],
@@ -690,6 +690,7 @@ class RunwaySection extends HTMLElement {
   private W = 0;
   private H = 0;
   private fs = 1.08;
+  private modelH = 380;
   private unit = 300;
   private latchedVh = 0;
   private latchedW = 0;
@@ -1478,7 +1479,7 @@ class RunwaySection extends HTMLElement {
             if (rect.height > 0) headerH += rect.height;
           }
         });
-      const frameH = Math.max(380, window.innerHeight - headerH);
+      const frameH = Math.max(280, window.innerHeight - headerH);
       this.style.setProperty('--rw-frame-h', `${frameH}px`);
 
       if (this.activeSheetCard) {
@@ -1494,14 +1495,25 @@ class RunwaySection extends HTMLElement {
     this.fs = m === 'ring' ? 1.08 : 1;
     this.style.setProperty('--rw-fs', String(this.fs));
 
+    // La largeur utile de la scène dépend de la place laissée par le panneau :
+    // sur une scène étroite (tablette), la voiture doit occuper plus de largeur.
+    const capW = this.W < 520 ? 0.86 : this.W < 760 ? 0.7 : 0.56;
     const modelH =
       m === 'ring'
-        ? Math.max(180, Math.min(Math.round((this.H - 34 - 18) / 1.08), Math.round((this.W * 0.56) / CAR_AR)))
-        : Math.max(150, Math.min(Math.round(this.H - 42), Math.round((this.W * 0.84) / CAR_AR)));
+        ? Math.max(150, Math.min(Math.round((this.H - 34 - 18) / 1.08), Math.round((this.W * capW) / CAR_AR)))
+        : Math.max(150, Math.min(Math.round(this.H - 42), Math.round((this.W * 0.88) / CAR_AR)));
+    this.modelH = modelH;
     this.stage.style.setProperty('--rw-model-h', `${modelH}px`);
 
-    const hx = m === 'ring' ? 0.5 * this.W : this.isMobile() ? 0.48 * this.W : 0.4 * this.W;
-    const hy = m === 'ring' ? 34 : this.isMobile() ? 22 : 36;
+    const hx = m === 'ring' ? 0.5 * this.W : this.isMobile() ? 0.5 * this.W : 0.4 * this.W;
+    // Anneau : la voiture active est centrée dans la scène (alignée sur le calcul
+    // de `floor` dans renderAll) au lieu de rester collée au bas de la scène.
+    const hy =
+      m === 'ring'
+        ? Math.max(34, Math.round((this.H - modelH * this.fs) / 2))
+        : this.isMobile()
+          ? 22
+          : 36;
     this.stage.style.setProperty('--rw-hx', `${hx.toFixed(2)}px`);
     this.stage.style.setProperty('--rw-hy', `${hy}px`);
     this.style.setProperty(
@@ -1512,7 +1524,7 @@ class RunwaySection extends HTMLElement {
     if (m === 'ring') {
       this.unit = Math.max(this.isMobile() ? 90 : 120, 0.3 * this.W);
     } else {
-      const sx = this.isMobile() ? 0.45 : 0.125;
+      const sx = this.isMobile() ? 0.71 : 0.125;
       this.unit = Math.max(this.isMobile() ? 90 : 120, this.W * sx * 1.6);
     }
 
@@ -1685,9 +1697,12 @@ class RunwaySection extends HTMLElement {
     if (m === 'ring') {
       const mobile = this.isMobile();
       const cx = 0.5 * this.W;
-      const R = (mobile ? 0.72 : 0.62) * this.W;
+      const R = (mobile ? 0.72 : 0.78) * this.W;
       const P = (mobile ? 1.9 : 1.65) * this.W;
-      const floor = this.H - 34;
+      // La voiture active est centrée verticalement dans la scène au lieu d'être
+      // collée en bas : supprime le grand vide blanc au-dessus du véhicule.
+      const heroH = this.modelH * this.fs;
+      const floor = Math.min(this.H - 34, Math.max(this.H * 0.42, (this.H + heroH) / 2));
       const horizon = 0.36 * this.H;
       const step = (Math.PI * 2) / this.BODY_COUNT;
 
@@ -1699,12 +1714,17 @@ class RunwaySection extends HTMLElement {
         const zDepth = R * (1 - Math.cos(phi));
         const persp = P / (P + zDepth);
         const sl = Math.abs(phi) / step;
-        const scale = persp * (1 + (this.fs - 1) * clamp(1 - sl, 0, 1));
+        // Réduction d'échelle par distance : les voitures voisines passent
+        // nettement derrière la voiture active au lieu de la heurter.
+        const scale =
+          persp * (1 - 0.28 * clamp(sl, 0, 1)) * (1 + (this.fs - 1) * clamp(1 - sl, 0, 1));
         const x = cx + R * Math.sin(phi) * persp;
         const feet = horizon + (floor - horizon) * persp;
         const bottom = this.H - feet;
-        const blur = sl <= 1 ? 1.8 * sl : Math.min(1.8 + (sl - 1) * 2, 6.5);
-        let opacity = clamp((Math.cos(phi) + 0.55) / 0.3, 0, 1);
+        const blur = sl <= 1 ? 2.4 * sl : Math.min(2.4 + (sl - 1) * 2, 7);
+        // Un seul voisin visible de chaque côté, en fondu : plus d'empilement
+        // de silhouettes sombres autour du véhicule.
+        let opacity = clamp(1 - 0.5 * sl, 0, 1);
         if (this.still && sl < 0.02) {
           opacity = 0;
         }
@@ -1713,13 +1733,15 @@ class RunwaySection extends HTMLElement {
       }
     } else {
       const mobile = this.isMobile();
-      const ax = mobile ? 0.48 : 0.4;
+      const ax = mobile ? 0.5 : 0.4;
       const ay = mobile ? 22 : 36;
-      const sx = mobile ? 0.45 : 0.125;
+      // Sur mobile la voiture active occupe 88 % de la scène : la suivante doit
+      // être rejetée au-delà du bord pour ne pas mordre sur son arrière.
+      const sx = mobile ? 0.71 : 0.125;
       const sy = mobile ? 22 : 58;
-      const sr = 0.76;
+      const sr = mobile ? 0.62 : 0.76;
       const ex = mobile ? 0.55 : 0.38;
-      const d = mobile ? 4 : 5;
+      const d = mobile ? 3 : 5;
 
       for (const s of this.bodies) {
         const goal = this.wrapN(s.a - this.target);
@@ -1743,18 +1765,22 @@ class RunwaySection extends HTMLElement {
           const x = this.W * (ax - ex * e);
           const bottom = ay - 22 * e;
           const scale = 1 + 0.14 * e;
-          const opacity = Math.max(0, 1 - 1.05 * e);
+          const opacity = mobile ? 0 : Math.max(0, 1 - 1.05 * e);
           const blur = 4 * Math.min(e, 1);
           this.put(s, x, bottom, scale, opacity, blur, 1100);
         } else {
           const x = this.W * (ax + sx * k);
           const bottom = ay + sy * k;
           const scale = Math.pow(sr, k);
-          let opacity = k <= d - 1 ? 1 - 0.13 * k : Math.max(0, 0.61 * (d - k));
+          // Le modèle suivant n'est qu'un repère de profondeur : très léger et
+          // flou, jamais une seconde voiture qui entre en collision avec l'active.
+          // Sur mobile, une seule voiture à la fois : aucun voiture ne peut
+          // venir recouvrir le modèle actif, même pendant une transition.
+          let opacity = mobile ? 0 : k <= d - 1 ? 1 - 0.13 * k : Math.max(0, 0.61 * (d - k));
           if (this.still && Math.abs(k) < 0.02) {
             opacity = 0;
           }
-          const blur = Math.min(0.9 * k, 3.2);
+          const blur = mobile ? Math.min(2.6 * k, 4) : Math.min(0.9 * k, 3.2);
           const z = 1000 - Math.round(10 * k);
           this.put(s, x, bottom, scale, opacity, blur, z);
         }
