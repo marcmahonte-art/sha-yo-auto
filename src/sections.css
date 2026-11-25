@@ -1622,32 +1622,41 @@ dialog.sy-dialog--vehicle {
 
 #nous-trouver .sy-location-layout {
   display: grid;
-  grid-template-columns: 260px minmax(0, 1fr);
-  align-items: start;
-  gap: 64px;
+  grid-template-columns: 300px minmax(0, 1fr);
+  align-items: stretch;
+  gap: 72px;
 }
 
 #nous-trouver .sy-location-brand {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 20px;
-  padding-top: 8px;
+  justify-content: center;
+  gap: 0;
+  padding: 24px 40px 24px 0;
+  border-right: 1px solid var(--sy-line);
 }
 
 #nous-trouver .sy-location-logo {
   display: block;
   width: 100%;
-  max-width: 230px;
+  max-width: 240px;
   height: auto;
 }
 
 #nous-trouver .sy-location-heading {
-  margin-bottom: 28px;
+  margin-bottom: 36px;
+}
+
+#nous-trouver .sy-location {
+  min-height: 220px;
+  gap: 24px;
+  padding: 32px;
 }
 
 #nous-trouver .sy-location-head {
   align-items: flex-start;
+  gap: 16px;
 }
 
 #nous-trouver .sy-location-icon {
@@ -1677,18 +1686,6 @@ dialog.sy-dialog--vehicle {
   line-height: 1.35;
 }
 
-#nous-trouver .sy-location-row-icon {
-  width: 14px;
-  height: 14px;
-  margin-right: 6px;
-  vertical-align: -2px;
-  fill: none;
-  stroke: var(--sy-muted);
-  stroke-width: 1.5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
 #nous-trouver .sy-location-service {
   margin: 0;
   color: var(--sy-ink);
@@ -1698,12 +1695,21 @@ dialog.sy-dialog--vehicle {
 
 @media (min-width: 750px) and (max-width: 1099px) {
   #nous-trouver .sy-location-layout {
-    grid-template-columns: 180px minmax(0, 1fr);
-    gap: 32px;
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 40px;
+  }
+
+  #nous-trouver .sy-location-brand {
+    padding-right: 24px;
   }
 
   #nous-trouver .sy-location-logo {
-    max-width: 180px;
+    max-width: 190px;
+  }
+
+  #nous-trouver .sy-location {
+    min-height: 200px;
+    padding: 28px;
   }
 
   #nous-trouver .sy-location-grid > * {
@@ -1725,11 +1731,17 @@ dialog.sy-dialog--vehicle {
   #nous-trouver .sy-location-brand {
     align-items: center;
     text-align: center;
-    padding-top: 0;
+    padding: 0;
+    border-right: 0;
   }
 
   #nous-trouver .sy-location-logo {
-    max-width: 180px;
+    max-width: 200px;
+  }
+
+  #nous-trouver .sy-location {
+    min-height: 0;
+    padding: 24px;
   }
 
   #nous-trouver .sy-location-heading {
