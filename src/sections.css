@@ -153,6 +153,64 @@ html {
   padding: 48px 0;
 }
 
+/* -------------------------------------------------- Présentation SHA-YO */
+
+.sy-about {
+  background: var(--sy-surface);
+}
+
+.sy-about-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  align-items: center;
+  gap: 64px;
+}
+
+.sy-about-media {
+  margin: 0;
+  overflow: hidden;
+  border-radius: var(--sy-radius);
+  background: var(--sy-soft);
+}
+
+.sy-about-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.sy-about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.sy-about .sy-lead,
+.sy-about-text {
+  max-width: 46ch;
+}
+
+.sy-about-text {
+  margin: 0;
+  color: var(--sy-muted);
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.sy-about .sy-btn--primary {
+  background: var(--sy-red);
+  border-color: var(--sy-red);
+  color: #fff;
+}
+
+.sy-about .sy-btn--primary:hover {
+  background: var(--sy-red-hover);
+  border-color: var(--sy-red-hover);
+}
+
 .sy-wrap {
   width: 100%;
   max-width: var(--sy-container);
@@ -1470,6 +1528,15 @@ dialog.sy-dialog--vehicle {
 
   .sy-home > .sy-section--tight {
     padding: 24px 0;
+  }
+
+  .sy-home .sy-about-inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+
+  .sy-home .sy-about-content {
+    gap: 16px;
   }
 
   .sy-home .sy-section-head {

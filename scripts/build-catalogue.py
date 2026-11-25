@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Génère les 10 fiches du catalogue public à partir du PDF Chaillot Auto."""
+"""Génère les 12 fiches du catalogue public (PDF Chaillot Auto + visuels additionnels)."""
 import html
 import io
 import re
@@ -25,6 +25,10 @@ CARS = [
      "Teinte noir brillant, entourage de calandre chromé et jantes alliage 5 branches doubles."),
     ("jetour-traveller-t2", "Jetour Traveller T2", "4x4 Tout-Terrain", "Blanc & Noir", "4x4", "Profil trois-quarts avant",
      "Design baroudeur angulaire, galerie de toit avec rampes LED intégrées, pare-chocs renforcé noir et pneus tout-terrain."),
+    ("zotye-t700-2017-rouge", "Zotye T700 2017", "SUV", "Rouge", "suv", "Profil trois-quarts avant",
+     "Carrosserie rouge, calandre à motif chromé, barres de toit aluminium, jantes alliage argentées et protections noires."),
+    ("mercedes-benz-gle", "Mercedes-Benz GLE", "SUV Coupé", "Bleu cyan", "suv", "Profil trois-quarts avant",
+     "Silhouette coupé toit panoramique sombre, calandre noire à étoile Mercedes, jantes multiples noires et bas de caisse foncés."),
 ]
 
 FILTERS = """        <div class="sy-filters" role="group" aria-label="Filtrer les véhicules">
@@ -51,7 +55,7 @@ CARD = """          <button class="sy-card" type="button" data-cat="{cat}" data-
 
 BLOCK_RE = re.compile(
     r'        <div class="sy-filters".*?<div class="sy-grid sy-grid--cols-3 gap-6">.*?'
-    r'<!-- Additional vehicle cards can be added here -->\n        </div>\n',
+    r'\n        </div>\n(?=\n        <div class="sy-actions">)',
     re.S,
 )
 
