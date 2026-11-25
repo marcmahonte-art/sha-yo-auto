@@ -1617,3 +1617,131 @@ dialog.sy-dialog--vehicle {
     text-align: center;
   }
 }
+
+/* ---------------------------------------- Refonte « Nous trouver » (accueil) */
+
+#nous-trouver .sy-location-layout {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  align-items: start;
+  gap: 64px;
+}
+
+#nous-trouver .sy-location-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  padding-top: 8px;
+}
+
+#nous-trouver .sy-location-logo {
+  display: block;
+  width: 100%;
+  max-width: 230px;
+  height: auto;
+}
+
+#nous-trouver .sy-location-heading {
+  margin-bottom: 28px;
+}
+
+#nous-trouver .sy-location-head {
+  align-items: flex-start;
+}
+
+#nous-trouver .sy-location-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 auto;
+  border-radius: var(--sy-radius);
+  background: rgba(225, 6, 0, 0.08);
+  color: var(--sy-red);
+}
+
+#nous-trouver .sy-location-icon svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+#nous-trouver .sy-location h3 {
+  font-size: 17px;
+  line-height: 1.35;
+}
+
+#nous-trouver .sy-location-row-icon {
+  width: 14px;
+  height: 14px;
+  margin-right: 6px;
+  vertical-align: -2px;
+  fill: none;
+  stroke: var(--sy-muted);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+#nous-trouver .sy-location-service {
+  margin: 0;
+  color: var(--sy-ink);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+@media (min-width: 750px) and (max-width: 1099px) {
+  #nous-trouver .sy-location-layout {
+    grid-template-columns: 180px minmax(0, 1fr);
+    gap: 32px;
+  }
+
+  #nous-trouver .sy-location-logo {
+    max-width: 180px;
+  }
+
+  #nous-trouver .sy-location-grid > * {
+    grid-column: span 6;
+  }
+
+  #nous-trouver .sy-location:last-child {
+    grid-column: 1 / -1;
+    display: flex;
+  }
+}
+
+@media (max-width: 749px) {
+  #nous-trouver .sy-location-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+
+  #nous-trouver .sy-location-brand {
+    align-items: center;
+    text-align: center;
+    padding-top: 0;
+  }
+
+  #nous-trouver .sy-location-logo {
+    max-width: 180px;
+  }
+
+  #nous-trouver .sy-location-heading {
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  #nous-trouver .sy-location-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  #nous-trouver .sy-location-grid > * {
+    grid-column: auto;
+  }
+}
